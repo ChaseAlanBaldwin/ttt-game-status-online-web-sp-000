@@ -24,6 +24,10 @@ while i < WIN_COMBINATIONS.length
   i++
 end
 
+if detect? == false
+  return false
+end
+
 
 WIN_COMBINATIONS.each do |win_combination|
   win_index_1 = win_combination[0]
