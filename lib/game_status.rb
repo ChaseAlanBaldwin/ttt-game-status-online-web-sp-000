@@ -19,7 +19,6 @@ while i < WIN_COMBINATIONS.length
   detectO = WIN_COMBINATIONS[i].detect{|o| x == "O"}
 
   if detectX == "X" || detectO == "O"
-    detect? = true
     i = WIN_COMBINATIONS.length
   end
   i++
