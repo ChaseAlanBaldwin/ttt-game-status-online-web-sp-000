@@ -11,7 +11,18 @@ def won?(board)
     return false
   end
 
+i = 0 
+detect? = true
 
+while i < WIN_COMBINATIONS.length
+  detectX = WIN_COMBINATIONS[i].detect{|x| x == "X"}
+  detectO = WIN_COMBINATIONS[i].detect{|o| x == "O"}
+
+  if detectX !== "X" && detectO !== "O"
+    detect? = false
+  end
+  i++    
+end
 
 
 WIN_COMBINATIONS.each do |win_combination|
