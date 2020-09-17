@@ -12,14 +12,15 @@ def won?(board)
   end
 
 i = 0
-detect? = true
+detect? = false
 
 while i < WIN_COMBINATIONS.length
   detectX = WIN_COMBINATIONS[i].detect{|x| x == "X"}
   detectO = WIN_COMBINATIONS[i].detect{|o| x == "O"}
 
-  if detectX !== "X" && detectO !== "O"
-    detect? = false
+  if detectX == "X" || detectO == "O"
+    detect? = true
+    i = WIN_COMBINATIONS.length
   end
   i++
 end
