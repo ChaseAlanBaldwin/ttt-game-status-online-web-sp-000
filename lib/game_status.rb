@@ -11,7 +11,7 @@ def won?(board)
     return false
   end
 
-i = 0 
+i = 0
 detect? = true
 
 while i < WIN_COMBINATIONS.length
@@ -21,7 +21,7 @@ while i < WIN_COMBINATIONS.length
   if detectX !== "X" && detectO !== "O"
     detect? = false
   end
-  i++    
+  i++
 end
 
 
