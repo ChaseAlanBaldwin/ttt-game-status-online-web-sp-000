@@ -12,7 +12,7 @@ def won?(board)
   end
 
 i = 0
-detect? = false
+detect = false
 
 while i < WIN_COMBINATIONS.length
   detectX = WIN_COMBINATIONS[i].detect{|x| x == "X"}
@@ -24,7 +24,7 @@ while i < WIN_COMBINATIONS.length
   i++
 end
 
-if detect? == false
+if detect == false
   return false
 end
 
