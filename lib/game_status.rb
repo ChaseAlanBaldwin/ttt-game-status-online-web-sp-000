@@ -16,7 +16,7 @@ i = 0
 while i < WIN_COMBINATIONS.length
   detection = WIN_COMBINATIONS[i].detect{"X" || "O"}
 
-  if detection !== "X" || "O"
+  if detection != "X" || "O"
     return false
   end
 
