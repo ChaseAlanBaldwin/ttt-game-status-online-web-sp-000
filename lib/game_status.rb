@@ -10,6 +10,17 @@ def won?(board)
   if board.length <= 0
     return false
   end
+
+i = 0 
+
+while i !== WIN_COMBINATIONS.length
+  detection = WIN_COMBINATIONS[i].detect{"X" || "O"}
+
+  if detection !== "X" || "O"
+    return false
+  end
+
+  
 WIN_COMBINATIONS.each do |win_combination|
   win_index_1 = win_combination[0]
   win_index_2 = win_combination[1]
@@ -22,11 +33,12 @@ WIN_COMBINATIONS.each do |win_combination|
   if position_1 == "O" && position_2 == "O" && position_3 == "O"
     return win_combination
   end
-
   if position_1 == "X" && position_2 == "X" && position_3 == "X"
     return win_combination
   else
     false
   end
 end
+
+
 end
