@@ -15,10 +15,7 @@ i = 0
 
 while i < WIN_COMBINATIONS.length
   detection = WIN_COMBINATIONS[i].detect{"X" || "O"}
-
-  if detection.length < 1
-    return false
-  end
+  
 
 
 WIN_COMBINATIONS.each do |win_combination|
